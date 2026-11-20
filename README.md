@@ -1,6 +1,6 @@
 # Mesta — website
 
-Landing page for the Mesta Windows apps, served by GitHub Pages at https://mesaty5060.github.io
+Landing page for the Mesta Windows apps, served by GitHub Pages at https://getmesta.github.io (the old https://mesaty5060.github.io redirects here)
 
 - `index.html` — the whole page (Arabic + English, inline CSS/JS).
 - `assets/` — app icons (256 px) and the favicon.
