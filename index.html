@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mesta — Windows apps, done right</title>
-<meta name="description" content="Six fast, lightweight Windows apps — PDF, downloads, screenshots, translation, archives and video. One launcher keeps them all up to date.">
+<meta name="description" content="Seven fast, lightweight Windows apps — PDF, downloads, screenshots, translation, archives, video and IPTV. One launcher keeps them all up to date.">
 <meta name="theme-color" content="#060914">
 <meta property="og:title" content="Mesta — Windows apps, done right">
-<meta property="og:description" content="Six fast, lightweight Windows apps. One launcher keeps them all up to date.">
+<meta property="og:description" content="Seven fast, lightweight Windows apps. One launcher keeps them all up to date.">
 <meta property="og:image" content="assets/launcher-512.png">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,7 +107,7 @@
   .ring.inner { inset: 22%; border-style: solid; border-color: var(--line); animation-duration: 30s; animation-direction: reverse; }
   @keyframes spin { to { transform: rotate(360deg); } }
   .sat { position: absolute; left: 50%; top: 50%; width: var(--sat); height: var(--sat); margin: calc(var(--sat) / -2);
-    transform: rotate(calc(var(--i) * 60deg)) translate(calc(var(--size) / 2)) rotate(calc(var(--i) * -60deg)); }
+    transform: rotate(calc(var(--i) * 360deg / 7)) translate(calc(var(--size) / 2)) rotate(calc(var(--i) * -360deg / 7)); }
   .sat img { width: 100%; height: 100%; padding: 12px; border-radius: 22px; background: rgba(14, 21, 48, .78); border: 1px solid var(--line2); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
     box-shadow: 0 14px 30px -12px rgba(0, 0, 0, .7); animation: spin 48s linear infinite reverse; transition: transform .3s var(--ease); }
   .core { position: absolute; inset: 31%; display: grid; place-items: center; }
@@ -246,7 +246,7 @@
       <div>
         <span class="pill in-1"><i></i><span data-i18n="hero.pill">For Windows 10 &amp; 11</span></span>
         <h1 class="in-2"><span data-i18n="hero.t1">Windows apps,</span><br><span class="grad" data-i18n="hero.t2">done right.</span></h1>
-        <p class="sub in-3" data-i18n="hero.sub">Six fast, lightweight tools. One launcher keeps them all up to date.</p>
+        <p class="sub in-3" data-i18n="hero.sub">Seven fast, lightweight tools. One launcher keeps them all up to date.</p>
         <div class="cta-row in-4">
           <a class="btn btn-primary dl-launcher" href="https://github.com/mesaty5060/mesta-releases/releases/download/launcher-v1.0.5/MestaLauncher-Setup-1.0.5.exe">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
@@ -271,6 +271,7 @@
           <div class="sat" style="--i:3"><img src="assets/translate.png" alt=""></div>
           <div class="sat" style="--i:4"><img src="assets/zip.png" alt=""></div>
           <div class="sat" style="--i:5"><img src="assets/videocut.png" alt=""></div>
+          <div class="sat" style="--i:6"><img src="assets/iptv.png" alt=""></div>
         </div>
         <div class="core"><img src="assets/launcher-512.png" alt=""></div>
       </div>
@@ -313,6 +314,11 @@
           <p data-i18n="vc">Cut video without losing quality.</p>
           <div class="card-foot"><span class="meta"><span class="ver en-num">v1.0.1</span> <span class="size en-num"></span></span><a class="btn btn-primary btn-sm dl" href="https://github.com/mesaty5060/mesta-releases/releases/download/videocut-v1.0.1/MestaVideoCut-Setup-1.0.1.exe" data-i18n="dl">Download</a></div>
         </article>
+        <article class="card rv" style="--accent:#22D3EE" data-app="iptv">
+          <div class="card-top"><img src="assets/iptv.png" alt="" width="64" height="64"><h3>IPTV</h3></div>
+          <p data-i18n="iptv">Play your own IPTV playlists.</p>
+          <div class="card-foot"><span class="meta"><span class="ver en-num">v1.0.3</span> <span class="size en-num"></span></span><a class="btn btn-primary btn-sm dl" href="https://github.com/mesaty5060/mesta-releases/releases/download/iptv-v1.0.3/MestaIPTV-Setup-1.0.3.exe" data-i18n="dl">Download</a></div>
+        </article>
       </div>
     </section>
 
@@ -339,6 +345,7 @@
           <div class="row" style="--d:1.5s"><img src="assets/translate.png" alt=""><div><div class="n">Translate</div><div class="track"><i></i></div></div><div class="state"><em>Update</em><strong>✓ Ready</strong></div></div>
           <div class="row" style="--d:2s"><img src="assets/zip.png" alt=""><div><div class="n">Zip</div><div class="track"><i></i></div></div><div class="state"><em>Install</em><strong>✓ Ready</strong></div></div>
           <div class="row" style="--d:2.5s"><img src="assets/videocut.png" alt=""><div><div class="n">Video Cut</div><div class="track"><i></i></div></div><div class="state"><em>Install</em><strong>✓ Ready</strong></div></div>
+          <div class="row" style="--d:3s"><img src="assets/iptv.png" alt=""><div><div class="n">IPTV</div><div class="track"><i></i></div></div><div class="state"><em>Install</em><strong>✓ Ready</strong></div></div>
         </div>
       </div>
     </section>
@@ -377,12 +384,12 @@
   var AR = {
     "nav.apps": "البرامج", "nav.launcher": "اللانشر", "nav.dl": "تحميل",
     "hero.pill": "لويندوز 10 و11", "hero.t1": "برامج ويندوز", "hero.t2": "كما يجب أن تكون.",
-    "hero.sub": "ستة برامج سريعة وخفيفة، وبرنامج واحد يحدّثها كلها.",
+    "hero.sub": "سبعة برامج سريعة وخفيفة، وبرنامج واحد يحدّثها كلها.",
     "hero.cta": "حمّل Mesta Launcher", "hero.cta2": "استعرض البرامج",
     "f.1": "بدون صلاحيات المسؤول", "f.2": "تحديثات موقّعة", "f.3": "عربي وإنجليزي",
     "apps.k": "المجموعة", "apps.t": "برامج صغيرة. نتائج كبيرة.",
     "pdf": "اقرأ وعدّل أي ملف PDF.", "dm": "تحميل بأقصى سرعة.", "snap": "لقطة شاشة بزر واحد.",
-    "tr": "ترجم أي كلام على الشاشة.", "rar": "افتح أي ملف مضغوط فوراً.", "vc": "قص الفيديو بنفس الجودة.",
+    "tr": "ترجم أي كلام على الشاشة.", "rar": "افتح أي ملف مضغوط فوراً.", "vc": "قص الفيديو بنفس الجودة.", "iptv": "شغّل قوائم IPTV الخاصة بك.",
     "dl": "تحميل", "oss": "مفتوح المصدر · AGPL",
     "l.k": "Mesta Launcher", "l.t": "برنامج واحد. كل التحديثات.",
     "l.1": "ثبّت اللانشر", "l.2": "اختر برامجك", "l.3": "التحديثات توصلك تلقائياً",
